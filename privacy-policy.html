@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CreatorMind by ToolVora</title>
+  <meta name="description" content="Privacy Policy for CreatorMind by ToolVora. Learn how we handle your data and protect your privacy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Legal Page Shared Styles ── */
+    .legal-hero {
+      padding: 120px 0 60px;
+      background: var(--bg-base);
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 480px; height: 480px;
+      background: var(--cyan);
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.07;
+      pointer-events: none;
+    }
+    .legal-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 320px; height: 320px;
+      background: var(--purple);
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .legal-hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--cyan-dim); color: var(--cyan);
+      border: 1px solid rgba(34,211,238,0.25);
+      padding: 5px 14px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .legal-meta {
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+    .legal-meta span { display: flex; align-items: center; gap: 6px; }
+    .legal-meta-dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--bg-border);
+    }
+
+    /* ── Legal Body ── */
+    .legal-body {
+      padding: 0 0 96px;
+      background: var(--bg-base);
+    }
+    .legal-layout {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Sidebar TOC */
+    .legal-toc {
+      position: sticky;
+      top: 88px;
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius);
+    }
+    .legal-toc-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .legal-toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+      margin-left: -10px;
+      transition: color var(--transition), border-color var(--transition);
+      line-height: 1.4;
+    }
+    .legal-toc a:hover,
+    .legal-toc a.active {
+      color: var(--cyan);
+      border-left-color: var(--cyan);
+    }
+
+    /* Content */
+    .legal-content { padding-top: 48px; }
+    .legal-section { margin-bottom: 52px; }
+    .legal-section:last-child { margin-bottom: 0; }
+
+    .legal-section-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legal-section-title::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 20px;
+      background: var(--gradient);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .legal-content p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .legal-content p:last-child { margin-bottom: 0; }
+
+    .legal-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+    .legal-content ul li {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .legal-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 15px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      opacity: 0.7;
+    }
+
+    .legal-highlight {
+      background: rgba(34,211,238,0.06);
+      border: 1px solid rgba(34,211,238,0.18);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .legal-highlight strong { color: var(--cyan); }
+
+    .legal-divider {
+      height: 1px;
+      background: var(--bg-border);
+      margin: 40px 0;
+    }
+
+    .legal-contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .legal-contact-card h4 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .legal-contact-card p {
+      font-size: 0.87rem !important;
+      color: var(--text-muted) !important;
+      margin: 0 !important;
+    }
+    .legal-contact-card a {
+      color: var(--cyan);
+      transition: opacity var(--transition);
+    }
+    .legal-contact-card a:hover { opacity: 0.8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .legal-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .legal-toc {
+        position: static;
+        margin-bottom: 32px;
+      }
+      .legal-content { padding-top: 0; }
+      .legal-hero { padding: 100px 0 48px; }
+    }
+    @media (max-width: 480px) {
+      .legal-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text-wrap">
+        <span class="logo-primary">CreatorMind</span>
+        <span class="logo-byline">by ToolVora</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#generator">AI Tools</a></li>
+      <li><a href="index.html#templates">Templates</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">☽</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-badge">Legal</div>
+    <h1 class="legal-title">Privacy <span class="gradient-text">Policy</span></h1>
+    <p style="color:var(--text-secondary);font-size:0.95rem;max-width:520px;line-height:1.7;margin-top:12px;">
+      We believe your privacy is a right, not a feature. Here is exactly how CreatorMind handles your data — plainly and honestly.
+    </p>
+    <div class="legal-meta">
+      <span>📅 Effective: June 1, 2026</span>
+      <div class="legal-meta-dot"></div>
+      <span>🔄 Last updated: June 1, 2026</span>
+      <div class="legal-meta-dot"></div>
+      <span>🏢 CreatorMind by ToolVora</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ BODY ═══════════════════ -->
+<div class="legal-body">
+  <div class="legal-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="legal-toc" id="toc">
+      <div class="legal-toc-title">Contents</div>
+      <a href="#overview">Overview</a>
+      <a href="#data-collect">Data We Collect</a>
+      <a href="#api-keys">API Keys</a>
+      <a href="#how-use">How We Use Data</a>
+      <a href="#sharing">Data Sharing</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#storage">Data Storage</a>
+      <a href="#rights">Your Rights</a>
+      <a href="#children">Children</a>
+      <a href="#changes">Policy Changes</a>
+      <a href="#contact-privacy">Contact</a>
+    </aside>
+
+    <!-- Content -->
+    <main class="legal-content">
+
+      <section class="legal-section" id="overview">
+        <h2 class="legal-section-title">Overview</h2>
+        <p>CreatorMind by ToolVora ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains what data we collect, why we collect it, and how we use it when you visit or use CreatorMind.</p>
+        <p>By using CreatorMind, you agree to the practices described in this policy. If you do not agree, please discontinue use of the platform.</p>
+        <div class="legal-highlight">
+          <strong>Short version:</strong> CreatorMind runs almost entirely in your browser. Your API key is stored locally on your device and is never transmitted to our servers. We do not sell your data to anyone, ever.
+        </div>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="data-collect">
+        <h2 class="legal-section-title">Data We Collect</h2>
+        <p>We collect minimal data necessary to operate and improve the platform. This includes:</p>
+        <ul>
+          <li><strong style="color:var(--text-primary)">Usage data</strong> — pages visited, features used, session duration, and interaction patterns (collected anonymously via analytics).</li>
+          <li><strong style="color:var(--text-primary)">Device and browser info</strong> — browser type, operating system, screen resolution, and language preferences.</li>
+          <li><strong style="color:var(--text-primary)">Error logs</strong> — technical errors and crash reports to help us fix bugs and improve stability.</li>
+          <li><strong style="color:var(--text-primary)">Voluntarily submitted info</strong> — if you contact us via email or a form, we retain the content of that communication.</li>
+        </ul>
+        <p>We do <strong style="color:var(--text-primary)">not</strong> collect your name, email address, or any personally identifiable information unless you explicitly provide it.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="api-keys">
+        <h2 class="legal-section-title">API Keys</h2>
+        <div class="legal-highlight">
+          <strong>🔒 Your API key never leaves your browser.</strong> It is stored using your browser's <code style="font-family:monospace;font-size:0.85em;background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;">localStorage</code> and is only used to make requests directly from your device to the Groq API. We have no access to it.
+        </div>
+        <p>CreatorMind requires a Groq API key to generate content. When you save your API key:</p>
+        <ul>
+          <li>It is stored exclusively in your browser's local storage.</li>
+          <li>It is never sent to CreatorMind servers or ToolVora infrastructure.</li>
+          <li>It is used solely to authenticate your requests to the Groq API on your behalf.</li>
+          <li>Clearing your browser data will permanently remove it.</li>
+        </ul>
+        <p>We strongly recommend keeping your Groq API key private and rotating it periodically through your Groq console.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="how-use">
+        <h2 class="legal-section-title">How We Use Your Data</h2>
+        <p>The limited data we collect is used to:</p>
+        <ul>
+          <li>Understand how creators use CreatorMind so we can improve features.</li>
+          <li>Diagnose and fix technical issues.</li>
+          <li>Measure the performance and reliability of the platform.</li>
+          <li>Respond to support requests and inquiries.</li>
+        </ul>
+        <p>We do not use your data for advertising, profiling, or any purpose beyond operating and improving CreatorMind.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="sharing">
+        <h2 class="legal-section-title">Data Sharing</h2>
+        <p>We do not sell, rent, or trade your data with third parties. We may share anonymised, aggregated usage statistics (e.g., "X users generated scripts this month") for general reporting purposes — these contain no personally identifiable information.</p>
+        <p>We may share data only in the following limited circumstances:</p>
+        <ul>
+          <li><strong style="color:var(--text-primary)">Service providers</strong> — third-party tools that help us operate the platform (analytics, hosting), bound by strict data processing agreements.</li>
+          <li><strong style="color:var(--text-primary)">Legal requirements</strong> — if required by applicable law, court order, or government authority.</li>
+          <li><strong style="color:var(--text-primary)">Business transfers</strong> — in the unlikely event of a merger or acquisition, user data would transfer to the successor entity under the same privacy commitments.</li>
+        </ul>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="cookies">
+        <h2 class="legal-section-title">Cookies &amp; Tracking</h2>
+        <p>CreatorMind uses a minimal set of cookies and local storage:</p>
+        <ul>
+          <li><strong style="color:var(--text-primary)">Theme preference</strong> — remembers whether you prefer dark or light mode.</li>
+          <li><strong style="color:var(--text-primary)">API key storage</strong> — stores your Groq API key locally so you don't have to re-enter it.</li>
+          <li><strong style="color:var(--text-primary)">Analytics</strong> — anonymous usage data to help us understand how the platform is used.</li>
+        </ul>
+        <p>We do not use advertising cookies, cross-site tracking pixels, or fingerprinting technologies. You can clear all stored data at any time by clearing your browser's local storage and cookies for this site.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="storage">
+        <h2 class="legal-section-title">Data Storage &amp; Security</h2>
+        <p>Content generated using CreatorMind is processed in real time and is not stored on our servers. Your generated scripts, captions, and other content exist only in your browser session.</p>
+        <p>We implement industry-standard security measures including HTTPS encryption for all data in transit. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+        <p>You are responsible for maintaining the security of your own device and browser environment.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="rights">
+        <h2 class="legal-section-title">Your Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your data:</p>
+        <ul>
+          <li><strong style="color:var(--text-primary)">Access</strong> — request a copy of the personal data we hold about you.</li>
+          <li><strong style="color:var(--text-primary)">Deletion</strong> — request deletion of your personal data.</li>
+          <li><strong style="color:var(--text-primary)">Correction</strong> — request correction of inaccurate data.</li>
+          <li><strong style="color:var(--text-primary)">Objection</strong> — object to certain processing of your data.</li>
+          <li><strong style="color:var(--text-primary)">Portability</strong> — request a portable copy of your data.</li>
+        </ul>
+        <p>Since most data in CreatorMind is stored locally on your device, you can exercise most of these rights directly by clearing your browser storage. For other requests, contact us at the address below.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="children">
+        <h2 class="legal-section-title">Children's Privacy</h2>
+        <p>CreatorMind is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="changes">
+        <h2 class="legal-section-title">Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we make material changes, we will update the "Last updated" date at the top of this page.</p>
+        <p>We encourage you to review this policy periodically. Continued use of CreatorMind after changes are posted constitutes your acceptance of the revised policy.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="contact-privacy">
+        <h2 class="legal-section-title">Contact</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out:</p>
+        <div class="legal-contact-card">
+          <h4>CreatorMind by ToolVora</h4>
+          <p>Part of the <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI Ecosystem</a></p>
+          <p style="margin-top:8px !important;">📧 Contact via <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a></p>
+          <p style="margin-top:4px !important;">🐦 <a href="https://x.com/atuljangir_" target="_blank" rel="noopener noreferrer">@atuljangir_</a> on X</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text-wrap">
+            <span class="logo-primary">CreatorMind</span>
+            <span class="logo-byline">by ToolVora</span>
+          </span>
+        </a>
+        <p>AI-powered content creation and strategy platform for modern creators.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#generator">AI Generator</a>
+          <a href="index.html#templates">Templates</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a href="privacy-policy.html" style="color:var(--cyan)">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2026 CreatorMind by ToolVora. All Rights Reserved.</p>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a>
+        <a href="privacy-policy.html" style="color:var(--cyan)">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const html = document.documentElement;
+
+  const saved = localStorage.getItem('cm-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  themeIcon.textContent = saved === 'dark' ? '☽' : '☀';
+
+  themeToggle.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('cm-theme', next);
+    themeIcon.textContent = next === 'dark' ? '☽' : '☀';
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.style.background = window.scrollY > 20
+      ? (html.getAttribute('data-theme') === 'dark' ? 'rgba(11,17,32,0.97)' : 'rgba(248,250,252,0.97)')
+      : '';
+  });
+
+  // TOC active highlight
+  const sections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('.legal-toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.legal-toc a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

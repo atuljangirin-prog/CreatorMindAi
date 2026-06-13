@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — CreatorMind by ToolVora</title>
+  <meta name="description" content="Terms of Service for CreatorMind by ToolVora. Understand your rights and responsibilities when using our platform." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Legal Page Shared Styles ── */
+    .legal-hero {
+      padding: 120px 0 60px;
+      background: var(--bg-base);
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 480px; height: 480px;
+      background: var(--purple);
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.07;
+      pointer-events: none;
+    }
+    .legal-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 320px; height: 320px;
+      background: var(--cyan);
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    .legal-hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--purple-dim); color: var(--purple);
+      border: 1px solid rgba(139,92,246,0.25);
+      padding: 5px 14px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .legal-meta {
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+    .legal-meta-dot {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--bg-border);
+    }
+
+    /* ── Legal Body ── */
+    .legal-body {
+      padding: 0 0 96px;
+      background: var(--bg-base);
+    }
+    .legal-layout {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Sidebar TOC */
+    .legal-toc {
+      position: sticky;
+      top: 88px;
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius);
+    }
+    .legal-toc-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+    .legal-toc a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      border-left: 2px solid transparent;
+      padding-left: 10px;
+      margin-left: -10px;
+      transition: color var(--transition), border-color var(--transition);
+      line-height: 1.4;
+    }
+    .legal-toc a:hover,
+    .legal-toc a.active {
+      color: var(--purple);
+      border-left-color: var(--purple);
+    }
+
+    /* Content */
+    .legal-content { padding-top: 48px; }
+    .legal-section { margin-bottom: 52px; }
+    .legal-section:last-child { margin-bottom: 0; }
+
+    .legal-section-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legal-section-title::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 20px;
+      background: var(--gradient);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .legal-content p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .legal-content p:last-child { margin-bottom: 0; }
+
+    .legal-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+    .legal-content ul li {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .legal-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 15px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+      opacity: 0.7;
+    }
+
+    .legal-highlight {
+      background: rgba(139,92,246,0.06);
+      border: 1px solid rgba(139,92,246,0.18);
+      border-left: 3px solid var(--purple);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .legal-highlight strong { color: var(--purple); }
+
+    .legal-warn {
+      background: rgba(251,191,36,0.06);
+      border: 1px solid rgba(251,191,36,0.2);
+      border-left: 3px solid #FBBF24;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .legal-warn strong { color: #FBBF24; }
+
+    .legal-divider {
+      height: 1px;
+      background: var(--bg-border);
+      margin: 40px 0;
+    }
+
+    .legal-contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-top: 16px;
+    }
+    .legal-contact-card h4 { font-size: 0.95rem; margin-bottom: 8px; }
+    .legal-contact-card p {
+      font-size: 0.87rem !important;
+      color: var(--text-muted) !important;
+      margin: 0 !important;
+    }
+    .legal-contact-card a {
+      color: var(--purple);
+      transition: opacity var(--transition);
+    }
+    .legal-contact-card a:hover { opacity: 0.8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .legal-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .legal-toc {
+        position: static;
+        margin-bottom: 32px;
+      }
+      .legal-content { padding-top: 0; }
+      .legal-hero { padding: 100px 0 48px; }
+    }
+    @media (max-width: 480px) {
+      .legal-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-icon">⬡</span>
+      <span class="logo-text-wrap">
+        <span class="logo-primary">CreatorMind</span>
+        <span class="logo-byline">by ToolVora</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#generator">AI Tools</a></li>
+      <li><a href="index.html#templates">Templates</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">☽</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-badge">Legal</div>
+    <h1 class="legal-title">Terms of <span class="gradient-text">Service</span></h1>
+    <p style="color:var(--text-secondary);font-size:0.95rem;max-width:520px;line-height:1.7;margin-top:12px;">
+      These terms govern your use of CreatorMind. Please read them carefully — we've kept them as clear and human-readable as possible.
+    </p>
+    <div class="legal-meta">
+      <span>📅 Effective: June 1, 2026</span>
+      <div class="legal-meta-dot"></div>
+      <span>🔄 Last updated: June 1, 2026</span>
+      <div class="legal-meta-dot"></div>
+      <span>🏢 CreatorMind by ToolVora</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ BODY ═══════════════════ -->
+<div class="legal-body">
+  <div class="legal-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="legal-toc" id="toc">
+      <div class="legal-toc-title">Contents</div>
+      <a href="#acceptance">Acceptance</a>
+      <a href="#description">The Service</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#api-use">API Usage</a>
+      <a href="#your-content">Your Content</a>
+      <a href="#prohibited">Prohibited Use</a>
+      <a href="#ip">Intellectual Property</a>
+      <a href="#third-party">Third-Party Services</a>
+      <a href="#disclaimer">Disclaimers</a>
+      <a href="#liability">Limitation of Liability</a>
+      <a href="#termination">Termination</a>
+      <a href="#governing">Governing Law</a>
+      <a href="#changes-terms">Changes</a>
+      <a href="#contact-terms">Contact</a>
+    </aside>
+
+    <!-- Content -->
+    <main class="legal-content">
+
+      <section class="legal-section" id="acceptance">
+        <h2 class="legal-section-title">Acceptance of Terms</h2>
+        <p>By accessing or using CreatorMind by ToolVora ("CreatorMind", "the Service", "we", "our", or "us"), you agree to be bound by these Terms of Service ("Terms") and our <a href="privacy-policy.html" style="color:var(--purple)">Privacy Policy</a>.</p>
+        <p>If you do not agree with any part of these Terms, you must not use the Service. These Terms constitute a legally binding agreement between you and CreatorMind by ToolVora.</p>
+        <div class="legal-highlight">
+          <strong>Short version:</strong> Using CreatorMind means you accept these terms. If something is unclear, contact us before using the platform.
+        </div>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="description">
+        <h2 class="legal-section-title">The Service</h2>
+        <p>CreatorMind is an AI-powered content creation platform that helps creators, marketers, and businesses generate scripts, captions, hashtags, hooks, and other content using artificial intelligence.</p>
+        <p>The Service is provided "as is" for personal and commercial use by individual creators and small businesses. CreatorMind uses the Groq API for AI content generation, which you must supply independently via your own API key.</p>
+        <p>We reserve the right to modify, suspend, or discontinue any part of the Service at any time, with or without notice.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="eligibility">
+        <h2 class="legal-section-title">Eligibility</h2>
+        <p>You must be at least 13 years of age to use CreatorMind. By using the Service, you represent and warrant that:</p>
+        <ul>
+          <li>You are at least 13 years old (or the age of digital consent in your jurisdiction, whichever is higher).</li>
+          <li>You have the legal capacity to enter into these Terms.</li>
+          <li>Your use of the Service does not violate any applicable laws or regulations.</li>
+        </ul>
+        <p>If you are using CreatorMind on behalf of an organisation, you represent that you have the authority to bind that organisation to these Terms.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="api-use">
+        <h2 class="legal-section-title">API Usage &amp; Your Responsibilities</h2>
+        <p>CreatorMind requires a valid Groq API key to function. By using your API key with CreatorMind:</p>
+        <ul>
+          <li>You accept full responsibility for all API usage and any associated costs incurred under your Groq account.</li>
+          <li>You agree to comply with <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">Groq's Terms of Service</a> and Acceptable Use Policy.</li>
+          <li>You will not share your API key publicly or embed it in publicly accessible code.</li>
+          <li>You acknowledge that CreatorMind stores your API key locally in your browser only, and we bear no liability for its security on your device.</li>
+        </ul>
+        <div class="legal-warn">
+          <strong>⚠ Important:</strong> You are solely responsible for any content generated using your API key. Misuse of your API key — including generating prohibited content — is your responsibility, not ours.
+        </div>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="your-content">
+        <h2 class="legal-section-title">Your Content</h2>
+        <p>You retain full ownership of all content you input into CreatorMind and all content generated on your behalf. By using the Service, you grant us a limited, non-exclusive, royalty-free licence to process your inputs solely for the purpose of providing the Service.</p>
+        <p>We do not store, review, or use your generated content for any purpose other than displaying it to you in real time. Content is not retained on our servers after your session ends.</p>
+        <p>You are solely responsible for ensuring that:</p>
+        <ul>
+          <li>Your inputs do not infringe third-party intellectual property rights.</li>
+          <li>Your generated content complies with applicable laws and platform policies where you publish it.</li>
+          <li>You use AI-generated content responsibly and disclose its AI origins where required.</li>
+        </ul>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="prohibited">
+        <h2 class="legal-section-title">Prohibited Use</h2>
+        <p>You agree not to use CreatorMind to:</p>
+        <ul>
+          <li>Generate content that is illegal, harmful, threatening, abusive, harassing, defamatory, or discriminatory.</li>
+          <li>Create spam, phishing content, or deceptive material intended to mislead others.</li>
+          <li>Produce content that infringes copyright, trademark, or other intellectual property rights.</li>
+          <li>Generate content involving the exploitation of minors in any form.</li>
+          <li>Attempt to reverse-engineer, scrape, or extract data from the platform beyond normal use.</li>
+          <li>Circumvent, disable, or interfere with security features of the Service.</li>
+          <li>Use the Service for any purpose that violates Groq's Acceptable Use Policy.</li>
+          <li>Impersonate any person, entity, or brand without authorisation.</li>
+        </ul>
+        <p>We reserve the right to terminate access for users who violate these prohibitions.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="ip">
+        <h2 class="legal-section-title">Intellectual Property</h2>
+        <p>All CreatorMind platform code, design, branding, UI elements, and non-user-generated content are the intellectual property of ToolVora and are protected by applicable copyright, trademark, and other IP laws.</p>
+        <p>You may not copy, reproduce, distribute, or create derivative works from any part of the CreatorMind platform without our prior written consent.</p>
+        <p>The ToolVora name and logo, and the CreatorMind name and logo, are trademarks of ToolVora. You may not use these marks without our express written permission.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="third-party">
+        <h2 class="legal-section-title">Third-Party Services</h2>
+        <p>CreatorMind integrates with third-party services, including Groq for AI model inference. Your use of these services is subject to their own terms and policies:</p>
+        <ul>
+          <li>Groq API — <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">console.groq.com</a></li>
+          <li>ToolVora AI — <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer" style="color:var(--purple)">toolvora-ai</a></li>
+        </ul>
+        <p>We are not responsible for the availability, accuracy, or content of third-party services, and their terms govern your use of those services independently of these Terms.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="disclaimer">
+        <h2 class="legal-section-title">Disclaimers</h2>
+        <p>CreatorMind is provided on an <strong style="color:var(--text-primary)">"as is" and "as available"</strong> basis, without warranties of any kind, express or implied.</p>
+        <p>We do not warrant that:</p>
+        <ul>
+          <li>The Service will be uninterrupted, error-free, or free of harmful components.</li>
+          <li>AI-generated content will be accurate, complete, or suitable for your specific purpose.</li>
+          <li>The Service will meet your particular requirements or expectations.</li>
+        </ul>
+        <div class="legal-warn">
+          <strong>⚠ AI Disclaimer:</strong> Content generated by CreatorMind is produced by artificial intelligence and may contain inaccuracies, biases, or errors. Always review AI-generated content before publishing. You are responsible for its accuracy and appropriateness.
+        </div>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="liability">
+        <h2 class="legal-section-title">Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, CreatorMind by ToolVora and its creators, contributors, and affiliates shall not be liable for:</p>
+        <ul>
+          <li>Any indirect, incidental, special, consequential, or punitive damages.</li>
+          <li>Loss of profits, revenue, data, goodwill, or business opportunities.</li>
+          <li>Damages resulting from your use of, or inability to use, the Service.</li>
+          <li>Any content generated by the AI that you publish or rely upon.</li>
+          <li>Unauthorized access to or alteration of your data.</li>
+        </ul>
+        <p>In jurisdictions that do not allow the exclusion of certain warranties or limitation of liability, our liability shall be limited to the maximum extent permitted by law.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="termination">
+        <h2 class="legal-section-title">Termination</h2>
+        <p>You may stop using CreatorMind at any time. Since the platform runs in your browser and stores no account data on our servers, simply closing the page and clearing your browser storage constitutes full termination of your use.</p>
+        <p>We reserve the right to restrict or terminate access to CreatorMind for any user who:</p>
+        <ul>
+          <li>Violates these Terms or our Acceptable Use guidelines.</li>
+          <li>Engages in fraudulent, abusive, or illegal activity.</li>
+          <li>Causes harm to the platform, other users, or third parties.</li>
+        </ul>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="governing">
+        <h2 class="legal-section-title">Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with applicable law. Any disputes arising from or relating to these Terms or the Service shall be resolved through good-faith negotiation in the first instance.</p>
+        <p>If a dispute cannot be resolved informally, both parties agree to submit to the jurisdiction of the competent courts of the applicable territory.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="changes-terms">
+        <h2 class="legal-section-title">Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. Your continued use of CreatorMind after changes are posted constitutes your acceptance of the revised Terms.</p>
+        <p>We recommend reviewing these Terms periodically to stay informed of any updates.</p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <section class="legal-section" id="contact-terms">
+        <h2 class="legal-section-title">Contact</h2>
+        <p>If you have questions about these Terms or need to report a violation, please reach out:</p>
+        <div class="legal-contact-card">
+          <h4>CreatorMind by ToolVora</h4>
+          <p>Part of the <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI Ecosystem</a></p>
+          <p style="margin-top:8px !important;">📧 Contact via <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a></p>
+          <p style="margin-top:4px !important;">🐦 <a href="https://x.com/atuljangir_" target="_blank" rel="noopener noreferrer">@atuljangir_</a> on X</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text-wrap">
+            <span class="logo-primary">CreatorMind</span>
+            <span class="logo-byline">by ToolVora</span>
+          </span>
+        </a>
+        <p>AI-powered content creation and strategy platform for modern creators.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Platform</h4>
+        <div class="footer-links">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#generator">AI Generator</a>
+          <a href="index.html#templates">Templates</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html" style="color:var(--purple)">Terms of Service</a>
+          <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <p>© 2026 CreatorMind by ToolVora. All Rights Reserved.</p>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="https://atuljangirin-prog.github.io/toolvora-ai/" target="_blank" rel="noopener noreferrer">ToolVora AI</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html" style="color:var(--purple)">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  const html = document.documentElement;
+
+  const saved = localStorage.getItem('cm-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  themeIcon.textContent = saved === 'dark' ? '☽' : '☀';
+
+  themeToggle.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('cm-theme', next);
+    themeIcon.textContent = next === 'dark' ? '☽' : '☀';
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.style.background = window.scrollY > 20
+      ? (html.getAttribute('data-theme') === 'dark' ? 'rgba(11,17,32,0.97)' : 'rgba(248,250,252,0.97)')
+      : '';
+  });
+
+  // TOC active highlight
+  const sections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('.legal-toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.legal-toc a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
